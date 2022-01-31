@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica 1</title>
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <div class="container" id="prueba">
+        
+        <h1>Ejemplo Javascript</h1>
+        
+        
+        <div class="mb-3">
+            <h2>Agregar elemento</h2>
+            <input type = "text" id="addItem",class = "form-control">
+            <button id="addItemButton" class="btn btn-success" v-on:keyup.enter="addItemButton">Add</button>
+            <button id ="removeItemButton" class ="btn btn-danger">Delete Last</button>
+            <button id = "removeItem" class = "btn btn-danger">Delete Selected</button>
+        </div>
+        
+        <div class="mb-3">
+            <button id="hideElements" class = "btn btn-secondary"><<</button>
+        </div>
+        
+        <div class = "mb-3" id="list">
+            <!--lista de elementos-->
+            <div class="card" , id ="#root">
+                <div class="card-body">
+                    <ul id ="listItems">
+                        <!--aqui se agregaran los elementos-->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+    <div class="container" id="principal">
+        <p v-html="encabezado"></p>
+        <p> ***** ejercicio3 *****</p>
+        <h1>{{title}}</h1>
+
+        <br>
+
+        <font face="Comic Sans MS "><b style="color:blue" >{{contenido}}</b></font>
+
+        <br>
+        <p> ***** ejercicio 4 *****</p>
+        <h1>{{titulo}}</h1>
+        <i><h2 v-html="nombre"></h2></i>
+        <br>
+        <p> ***** ejercicio 5 *****</p>
+        <br>
+
+        <p style="color:#FF0000; "><b>Listado de peliculas</b></p>
+        <ul>
+            <li v-for="item in peliculas">
+                <label>{{item.text}}{{item.year}}</label>
+            </li>
+        </ul>
+        
+    </div>
+
+    <script src="app.js"></script>
+    
+    <script 
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
+        crossorigin="anonymous">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" 
+        crossorigin="anonymous">
+    </script>
+    
+
+</body>
+</html>
